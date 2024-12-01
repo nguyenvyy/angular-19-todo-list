@@ -1,0 +1,9 @@
+<div>
+  <div class="task-item">
+    <input type="checkbox" [checked]="task.isCompleted" (change)="handleCheckboxChange()">
+    <div class="task-item__title">{{ task.name }}</div>
+    <div class="task-item__actions">
+      <button (click)="handleDelete()">x</button>
+    </div>
+  </div>
+</div>

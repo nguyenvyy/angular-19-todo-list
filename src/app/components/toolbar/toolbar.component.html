@@ -1,0 +1,17 @@
+<div>
+  <div class="item-left">
+    {{ numberOfItemLeft }} items left
+  </div>
+  <div class="filter-panel">
+    <button [class.active]="filter === 'all'" (click)="handleFilterChange('all')">All</button>
+    <button [class.active]="filter === 'active'" (click)="handleFilterChange('active')">Active</button>
+    <button [class.active]="filter === 'completed'" (click)="handleFilterChange('completed')">Completed</button>
+  </div>
+  <div>
+    @if (numberOfItemCompleted > 0) {
+    <button (click)="handleClearCompleted()">
+      Clear completed
+    </button>
+    }
+  </div>
+</div>
